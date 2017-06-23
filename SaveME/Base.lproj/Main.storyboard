@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="user_login" id="BYZ-38-t0r" customClass="LoginViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.088662400749999995" green="0.56574077690000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VSI-vB-b5T" appends="YES" id="EJL-WI-4Wa"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <segue destination="8Cs-Qw-vOF" kind="presentation" identifier="toRegister" id="lM1-w7-V3u"/>
+                        <segue destination="zTa-lX-bqO" kind="presentation" identifier="toHome" id="6IM-S9-ohy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VSI-vB-b5T">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="BYZ-38-t0r" id="WGP-Uo-Xff"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-274" y="454"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="w8O-jQ-ctr">
+            <objects>
+                <viewController id="8Cs-Qw-vOF" customClass="RegisterViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AfU-Dd-Pda"/>
+                        <viewControllerLayoutGuide type="bottom" id="0dz-MD-suJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KYS-iH-DBB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.35761041260451509" green="0.75153771505117384" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="TV9-tq-0PV" appends="YES" id="Zrq-iN-sTG"/>
+                        </connections>
+                    </view>
+                    <navigationItem key="navigationItem" id="FWX-fi-guP"/>
+                    <connections>
+                        <segue destination="zTa-lX-bqO" kind="presentation" identifier="register_success" id="9KJ-3g-sqD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gqV-9s-ZRY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="TV9-tq-0PV">
+                    <connections>
+                        <action selector="backgroundTapped:" destination="8Cs-Qw-vOF" id="qpd-kb-6XH"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="36" y="-591"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="Uxt-ui-rUv">
+            <objects>
+                <viewController storyboardIdentifier="homePage" id="zTa-lX-bqO" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Jh-PQ-LdT"/>
+                        <viewControllerLayoutGuide type="bottom" id="eAt-Mh-H5N"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="1Cw-2Y-w9L">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.088662400749999995" green="0.56574077690000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PM7-Yv-5qd"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="logout_success" id="938-zl-a7O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yn-MR-4nW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="866" y="412"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="9KJ-3g-sqD"/>
+    </inferredMetricsTieBreakers>
+</document>
