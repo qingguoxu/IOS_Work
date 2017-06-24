@@ -155,7 +155,7 @@
     
     backBtn = [[UIButton alloc] initWithFrame:CGRectMake(0.02*screenWidth, 0.02*screenHeight, 60, 40)];
     doneBtn = [[UIButton alloc] initWithFrame:CGRectMake(screenWidth-70, 0.02*screenHeight, 60, 40)];
-    registerBtn = [[UIButton alloc] initWithFrame:CGRectMake(0.3*screenWidth, 1.0*screenHeight, 120, 40)];
+    registerBtn = [[UIButton alloc] initWithFrame:CGRectMake(0.3*screenWidth, 1.05*screenHeight, 120, 40)];
     
     [backBtn setTitle:@"Back" forState:UIControlStateNormal];
     backBtn.titleLabel.font = [UIFont fontWithName:@"Arial" size:20.0];
@@ -285,6 +285,8 @@
                     NSLog(@"Save failed");
                 }
                 
+                [self performSegueWithIdentifier:@"register_success" sender:self];
+                
             }
             else
             {
@@ -301,7 +303,7 @@
             }
             
             
-            [self performSegueWithIdentifier:@"register_success" sender:self];
+            
 
             
             
